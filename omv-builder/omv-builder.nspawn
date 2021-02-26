@@ -1,0 +1,7 @@
+[Exec]
+Hostname=omv-x86_64-builder
+ResolvConf=copy-host
+
+[Files]
+Ephemeral=on
+TemporaryFileSystem=/tmp

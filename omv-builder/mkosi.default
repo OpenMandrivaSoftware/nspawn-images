@@ -1,0 +1,39 @@
+[Distribution]
+Distribution=openmandriva
+Release=cooker
+Architecture=x86_64
+
+[Output]
+Format=gpt_ext4
+Bootable=no
+Output=omv-x86_64-builder
+XZ=no
+
+[Host]
+NetworkVeth=no
+
+[Validation]
+Password=test
+
+[Packages]
+Packages=
+	builder-c
+	mock
+	git
+	coreutils
+	curl
+	sudo
+	procps-ng
+	gnutar
+	findutils
+	util-linux
+	wget
+	rpmdevtools
+	sed
+	grep
+	xz
+	zstd
+	gnupg
+	hostname
+	python-yaml
+	python-magic

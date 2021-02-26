@@ -1,0 +1,15 @@
+#!/bin/sh
+
+printf '%s\n' "Configuring image."
+
+printf '%s\n' "%mock ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+adduser omv
+usermod -a -G mock omv
+chown -R omv:mock /etc/mock
+sed -i -e 's/BUILD_TOKEN=.*/BUILD_TOKEN="dwEkuD_HaDha167ySLiM"/' /etc/sysconfig/builder-environment.conf
+sed -i -e 's/BUILD_ARCH=.*/BUILD_ARCH="x86_64"/' /etc/sysconfig/builder-environment.conf
+sed -i -e 's/BUILD_PLATFORM=.*/BUILD_PLATFORM="cooker"/' /etc/sysconfig/builder-environment.conf
+systemctl enable builder-c.service
+dnf clean all
+
+printf '%s\n' "Configuring image is done"
