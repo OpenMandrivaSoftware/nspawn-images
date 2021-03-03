@@ -12,4 +12,4 @@ sed -i -e 's/BUILD_PLATFORM=.*/BUILD_PLATFORM="cooker"/' /etc/sysconfig/builder-
 systemctl enable builder-c.service
 dnf clean all
 
-printf '%s\n' "Configuring image is done"
+printf '%s\n' "Configuring image is done."
